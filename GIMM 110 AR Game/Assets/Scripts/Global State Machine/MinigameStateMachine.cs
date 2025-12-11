@@ -5,8 +5,28 @@ using UnityEngine.SceneManagement;
 
 public class MinigameStateMachine : MonoBehaviour
 {
-    
+
+    public static MinigameStateMachine Instance; /*Singleton reference. This means that there will be one instance of this 
+                                                  * gameobject across the whole game. It's to ensure that there isn't chaotic
+                                                  * behavior from having mutliple of these objects.*/
+                                                  
+    public delegate void MinigameStateChanged(IMinigameState newState); /*Delegate is a keyword that defines what type of method this is.
+                                                                         *It is just saying that the state changed with whatever new state it is. */
+                                                                         
+    public event MinigameStateChanged OnStateChanged; //This line is the one actually telling other scripts who have subscribed the information.
+
     private IMinigameState currentState;
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
 
     void Start()
     {
@@ -42,6 +62,11 @@ public class MinigameStateMachine : MonoBehaviour
             SwitchState(new ShooterMinigameState(this));
             Debug.Log("3");
         }
+        else if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            SwitchState(new ShopState(this));
+            Debug.Log("4");
+        }
     }
 
     public void SwitchState(IMinigameState newState)
@@ -53,6 +78,13 @@ public class MinigameStateMachine : MonoBehaviour
         }
         currentState = newState;
         currentState.Enter();
+
+        OnStateChanged?.Invoke(newState);
+    }
+
+    public IMinigameState GetCurrentState()
+    {
+        return currentState;
     }
 }
   

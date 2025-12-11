@@ -6,8 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Board.unity
+    guid: 8aa8d2655f8192145b5e1ca126863482
+  - enabled: 1
     path: Assets/Scenes/Shop.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/PlatformerMinigame.unity
+    guid: 20c4d5d220d169f44b1e3dd3347be875
+  - enabled: 1
+    path: Assets/Scenes/ShooterMinigame.unity
+    guid: 359cc38d364a46241b020818f5779a05
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
