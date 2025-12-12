@@ -1,21 +1,19 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ShooterMinigameState : IMinigameState
+public class TimelessVertical : IMinigameState
 {
     private readonly MinigameStateMachine machine;
 
-    public ShooterMinigameState(MinigameStateMachine machine)
+    public TimelessVertical(MinigameStateMachine machine)
     {
         this.machine = machine;
     }
 
     public void Enter()
     {
-        Debug.Log("Entering shooter state");
-        SceneManager.LoadScene("ShooterMinigame");
-
-        
+        Debug.Log("Entered Timeless vertical");
+        SceneManager.LoadScene("TimelessVertical");
     }
     public void Update()
     {
@@ -23,6 +21,7 @@ public class ShooterMinigameState : IMinigameState
     }
     public void Exit()
     {
-        Debug.Log("Exited shooter scene");
+
     }
+
 }

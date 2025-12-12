@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TimelessHorizontal : IMinigameState
 {
@@ -12,6 +13,7 @@ public class TimelessHorizontal : IMinigameState
     public void Enter()
     {
         Debug.Log("Entered Timeless horizontal");
+        SceneManager.LoadScene("TimelessHorizontal");
     } 
     public void Update()
     {
