@@ -15,6 +15,8 @@ public class MinigameStateMachine : MonoBehaviour
                                                                          
     public event MinigameStateChanged OnStateChanged; //This line is the one actually telling other scripts who have subscribed the information.
 
+    public PlayerInfo activePlayerInfo;
+
     private IMinigameState currentState;
 
     public float minigameTimer;
@@ -70,7 +72,6 @@ public class MinigameStateMachine : MonoBehaviour
             SwitchState(new ShopState(this));
             Debug.Log("4");
         }
-        
     }
 
     public void SwitchState(IMinigameState newState)

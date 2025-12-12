@@ -148,6 +148,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7da7efd8160a43347b8ad81019af6746, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MinigameStateMachine
+  activePlayerInfo: {fileID: 0}
+  minigameTimer: 0
+  timerActive: 0
 --- !u!4 &81514664
 Transform:
   m_ObjectHideFlags: 0
@@ -176,6 +179,7 @@ GameObject:
   - component: {fileID: 155358171}
   - component: {fileID: 155358170}
   - component: {fileID: 155358174}
+  - component: {fileID: 155358175}
   m_Layer: 0
   m_Name: RedPlayer
   m_TagString: Player
@@ -307,6 +311,29 @@ MonoBehaviour:
   jumpForce: 8
   maxJumps: 1
   currentJumps: 0
+--- !u!114 &155358175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 155358168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29a074d529cf945029ef7cf40540c9df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Target: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_LoopMode: 1
+  m_Method: 0
+  m_Duration: 1
+  m_MaxSpeed: 10
+  m_EasingMode: 0
+  m_AlignmentMode: 1
+  m_ObjectForwardAxis: 2
+  m_ObjectUpAxis: 1
+  m_StartOffset: 0
 --- !u!1 &807774862
 GameObject:
   m_ObjectHideFlags: 0
@@ -753,6 +780,7 @@ GameObject:
   - component: {fileID: 1359191122}
   - component: {fileID: 1359191121}
   - component: {fileID: 1359191125}
+  - component: {fileID: 1359191126}
   m_Layer: 0
   m_Name: YellowPlayer
   m_TagString: Player
@@ -884,6 +912,29 @@ MonoBehaviour:
   jumpForce: 8
   maxJumps: 1
   currentJumps: 0
+--- !u!114 &1359191126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1359191119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29a074d529cf945029ef7cf40540c9df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Target: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_LoopMode: 1
+  m_Method: 0
+  m_Duration: 1
+  m_MaxSpeed: 10
+  m_EasingMode: 0
+  m_AlignmentMode: 1
+  m_ObjectForwardAxis: 2
+  m_ObjectUpAxis: 1
+  m_StartOffset: 0
 --- !u!1 &1449400105
 GameObject:
   m_ObjectHideFlags: 0
@@ -897,6 +948,7 @@ GameObject:
   - component: {fileID: 1449400108}
   - component: {fileID: 1449400107}
   - component: {fileID: 1449400111}
+  - component: {fileID: 1449400112}
   m_Layer: 0
   m_Name: GreenPlayer
   m_TagString: Player
@@ -1028,6 +1080,29 @@ MonoBehaviour:
   jumpForce: 8
   maxJumps: 1
   currentJumps: 0
+--- !u!114 &1449400112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449400105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29a074d529cf945029ef7cf40540c9df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Target: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_LoopMode: 1
+  m_Method: 0
+  m_Duration: 1
+  m_MaxSpeed: 10
+  m_EasingMode: 0
+  m_AlignmentMode: 1
+  m_ObjectForwardAxis: 2
+  m_ObjectUpAxis: 1
+  m_StartOffset: 0
 --- !u!1 &1797168045
 GameObject:
   m_ObjectHideFlags: 0
@@ -1282,6 +1357,7 @@ GameObject:
   - component: {fileID: 1920762912}
   - component: {fileID: 1920762915}
   - component: {fileID: 1920762916}
+  - component: {fileID: 1920762917}
   m_Layer: 0
   m_Name: BluePlayer
   m_TagString: Player
@@ -1413,6 +1489,29 @@ MonoBehaviour:
   jumpForce: 8
   maxJumps: 1
   currentJumps: 0
+--- !u!114 &1920762917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1920762910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29a074d529cf945029ef7cf40540c9df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Target: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_LoopMode: 1
+  m_Method: 0
+  m_Duration: 1
+  m_MaxSpeed: 10
+  m_EasingMode: 0
+  m_AlignmentMode: 1
+  m_ObjectForwardAxis: 2
+  m_ObjectUpAxis: 1
+  m_StartOffset: 0
 --- !u!1 &2116730377
 GameObject:
   m_ObjectHideFlags: 0
