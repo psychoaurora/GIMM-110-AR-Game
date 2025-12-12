@@ -4,7 +4,6 @@ public class PlayerMovement : MonoBehaviour
 {
     [HideInInspector] public Rigidbody2D rb;
     [HideInInspector] public Animator animator;
-    // Remove movementMachine field - you don't need it!
 
     public Transform groundCheck;
     public LayerMask groundLayer;
@@ -14,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+
+       // DontDestroyOnLoad(gameObject);
     }
     private void Update()
     {

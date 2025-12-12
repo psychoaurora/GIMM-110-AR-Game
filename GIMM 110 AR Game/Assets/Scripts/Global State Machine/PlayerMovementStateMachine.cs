@@ -23,10 +23,7 @@ public class PlayerMovementStateMachine : MonoBehaviour
             Debug.LogError("[PlayerMovementStateMachine] PlayerMovement component not found!");
         }
 
-
     }
-
-
 
     private void OnDisable()
     {
@@ -78,7 +75,7 @@ public class PlayerMovementStateMachine : MonoBehaviour
     {
         Debug.Log($"[PlayerMovementStateMachine] HandleSceneStateChange called with: {state?.GetType().Name ?? "null"}");
 
-        if (state is PlatformerMinigameState || state is ShooterMinigameState)
+        if (state is PlatformerMinigameState || state is ShooterMinigameState || state is HorizontalScroller || state is SingleRoomPlatformer || state is VerticalScroller || state is TimelessHorizontal)
         {
             enabledByScene = true;
             SwitchState(new IdleState(this));

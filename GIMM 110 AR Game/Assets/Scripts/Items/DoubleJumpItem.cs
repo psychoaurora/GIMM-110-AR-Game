@@ -7,7 +7,7 @@ public class DoubleJumpItem : ItemEffect
 
     public override void Apply(GameObject target)
     {
-        target.GetComponent<Movement2D>().maxJumps += amount;
+        target.GetComponent<PlayerMovementStateMachine>().maxJumps += amount;
     }
 }
 

@@ -22,21 +22,21 @@ public class MinigameStateMachine : MonoBehaviour
     {
         if (Instance != null && Instance != this)
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
             return;
         }
         Instance = this;
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
     }
 
     void Start()
     {
         if (FindObjectsByType<MinigameStateMachine>(FindObjectsSortMode.None).Length > 1)
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
             return;
         }
-        DontDestroyOnLoad(gameObject);
+       // DontDestroyOnLoad(gameObject);
         SwitchState(new BoardState(this));
     }
     
@@ -55,7 +55,7 @@ public class MinigameStateMachine : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            SwitchState(new PlatformerMinigameState(this));
+            SwitchState(new SingleRoomPlatformer(this));
             Debug.Log("2");
         }
         else if (Input.GetKeyDown(KeyCode.Alpha3))
@@ -68,6 +68,7 @@ public class MinigameStateMachine : MonoBehaviour
             SwitchState(new ShopState(this));
             Debug.Log("4");
         }
+        
     }
 
     public void SwitchState(IMinigameState newState)
@@ -88,6 +89,16 @@ public class MinigameStateMachine : MonoBehaviour
         return currentState;
     }
 
-    
+    /*public void StartMinigameTimer()
+    {
+        PlayerInfo activePlayerInfo = ActivePlayerManager.Instance.GetActivePlayerInfo();
+
+        if (activePlayerInfo != null)
+        {
+            minigameTimer = activePlayerInfo.timePerMinigame;
+            timerActive = true;
+            Debug.Log($"Minigame timer started: {minigameTimer} seconds");
+        }
+    }*/
 }
   

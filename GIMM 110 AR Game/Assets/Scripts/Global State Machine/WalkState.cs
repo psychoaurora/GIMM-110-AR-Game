@@ -13,8 +13,7 @@ public class WalkState : IPlayerMovementState
 
     public void Enter()
     {
-        // Optional: Set walking animation
-        // player.animator.SetBool("isWalking", true);
+        
     }
 
     public void Update()
