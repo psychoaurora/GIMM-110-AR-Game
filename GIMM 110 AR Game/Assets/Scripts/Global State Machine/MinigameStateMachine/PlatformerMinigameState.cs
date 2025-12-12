@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class PlatformerMinigameState : IMinigameState
 {
@@ -10,12 +11,15 @@ public class PlatformerMinigameState : IMinigameState
         this.machine = machine;
     }
         
-
     public void Enter()
     {
         Debug.Log("Entering platformer state");
         SceneManager.LoadScene("PlatformerMinigame");
+
+        
     }
+
+    
     public void Update()
     {
 

@@ -65,6 +65,11 @@ public class SplineGen : MonoBehaviour
         HandleMovementKeys();
         HandleCardInput();
         HandleSpecialTiles();
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            StartCoroutine(StartplayermoveandSpline());
+        }
     }
 
     // -------------------------------------------------------------
@@ -204,5 +209,26 @@ public class SplineGen : MonoBehaviour
         currentTracker = end;
         currentTracker2 = end;
         currentTile = end;
+    }
+
+    private IEnumerator StartplayermoveandSpline()
+    {
+
+        if (destination >= 0 && destination < boardTiles.Length)
+        {
+            for (int i = currentTile; i <= destination; i++) AddSplinePoint(i);
+        }
+
+        SplineAnimate activePlayer = ActivePlayerManager.Instance.GetSplineAnimate();
+
+        activePlayer.Restart(true);
+
+        yield return new WaitForSecondsRealtime(5);
+
+        currentTracker = destination;
+        currentTile = destination;
+        currentTracker2 = destination;
+        splineContainer.Spline.Clear();
+
     }
 }

@@ -1,7 +1,5 @@
 using UnityEngine;
 
-//I got this script entirely from CoPilot
-
 public class CameraController : MonoBehaviour
 {
     public Transform target; // The player or target to follow
@@ -9,12 +7,14 @@ public class CameraController : MonoBehaviour
     public float lockY = 0f; // The y-value to lock the camera to
     public bool lockXAxis = true; // Lock the x-axis
     public bool lockYAxis = true; // Lock the y-axis
-    public float smoothTime; // Smoothing time for following
+    public float smoothTime = 0.3f; // Smoothing time for followin
 
     private Vector3 velocity = Vector3.zero;
+    
 
-    void LateUpdate()//Late update is like update except it is called after Update is called
+    void LateUpdate()
     {
+
         Vector3 targetPosition = transform.position;
 
         // Update the camera's position
@@ -39,4 +39,6 @@ public class CameraController : MonoBehaviour
         // Smoothly move the camera to the target position
         transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
     }
+
+    
 }
