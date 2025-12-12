@@ -223,6 +223,7 @@ GameObject:
   - component: {fileID: 45695114}
   - component: {fileID: 45695113}
   - component: {fileID: 45695112}
+  - component: {fileID: 45695116}
   - component: {fileID: 45695115}
   m_Layer: 0
   m_Name: DoubleYellow
@@ -271,7 +272,31 @@ MonoBehaviour:
     m_RotationOrder: 4
   OnTargetFound:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 45695116}
+        m_TargetAssemblyTypeName: tilescript, Assembly-CSharp
+        m_MethodName: setTile
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 45695116}
+        m_TargetAssemblyTypeName: tilescript, Assembly-CSharp
+        m_MethodName: DetectObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnTargetLost:
     m_PersistentCalls:
       m_Calls: []
@@ -290,14 +315,14 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 
+  mTrackableName: DoubleYellow
   mInitializedInEditor: 1
   mDataSetPath: 
-  mAspectRatio: 1
+  mAspectRatio: 1.5657492
   mImageTargetType: 3
-  mWidth: 0.2
+  mWidth: 0.12773438
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 0}
+  mRuntimeTexture: {fileID: 2800000, guid: c2ad445ac4af904418dd8ad85dbcc3c8, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -331,11 +356,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 45695113}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 
+  mTargetName: DoubleYellow
   mDatasetName: 
   mCastedBehaviour: {fileID: 45695113}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}
+--- !u!114 &45695116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45695110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bac0686d40d5648449043da3d1dcf567, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: DoubleYellow
+  SplineGen: {fileID: 2004579111}
 --- !u!1 &60147291
 GameObject:
   m_ObjectHideFlags: 0
@@ -688,6 +727,7 @@ GameObject:
   - component: {fileID: 214451348}
   - component: {fileID: 214451347}
   - component: {fileID: 214451346}
+  - component: {fileID: 214451350}
   - component: {fileID: 214451349}
   m_Layer: 0
   m_Name: DoublePurple
@@ -736,7 +776,31 @@ MonoBehaviour:
     m_RotationOrder: 4
   OnTargetFound:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 214451350}
+        m_TargetAssemblyTypeName: tilescript, Assembly-CSharp
+        m_MethodName: setTile
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 214451350}
+        m_TargetAssemblyTypeName: tilescript, Assembly-CSharp
+        m_MethodName: DetectObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnTargetLost:
     m_PersistentCalls:
       m_Calls: []
@@ -755,14 +819,14 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 
+  mTrackableName: DoublePurple
   mInitializedInEditor: 1
   mDataSetPath: 
-  mAspectRatio: 1
+  mAspectRatio: 1.5657492
   mImageTargetType: 3
-  mWidth: 0.2
+  mWidth: 0.12773438
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 0}
+  mRuntimeTexture: {fileID: 2800000, guid: b3e2fa7d38ec76145bc97deff24c8123, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -796,11 +860,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 214451347}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 
+  mTargetName: DoublePurple
   mDatasetName: 
   mCastedBehaviour: {fileID: 214451347}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}
+--- !u!114 &214451350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 214451344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bac0686d40d5648449043da3d1dcf567, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: DoublePurple
+  SplineGen: {fileID: 2004579111}
 --- !u!1 &242288204
 GameObject:
   m_ObjectHideFlags: 0
@@ -3052,6 +3130,7 @@ GameObject:
   - component: {fileID: 973449599}
   - component: {fileID: 973449598}
   - component: {fileID: 973449597}
+  - component: {fileID: 973449601}
   - component: {fileID: 973449600}
   m_Layer: 0
   m_Name: DoubleGreen
@@ -3100,7 +3179,31 @@ MonoBehaviour:
     m_RotationOrder: 4
   OnTargetFound:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 973449601}
+        m_TargetAssemblyTypeName: tilescript, Assembly-CSharp
+        m_MethodName: setTile
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 973449601}
+        m_TargetAssemblyTypeName: tilescript, Assembly-CSharp
+        m_MethodName: DetectObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnTargetLost:
     m_PersistentCalls:
       m_Calls: []
@@ -3119,14 +3222,14 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 
+  mTrackableName: DoubleGreen
   mInitializedInEditor: 1
   mDataSetPath: 
-  mAspectRatio: 1
+  mAspectRatio: 1.5657492
   mImageTargetType: 3
-  mWidth: 0.2
+  mWidth: 0.12773438
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 0}
+  mRuntimeTexture: {fileID: 2800000, guid: 2da1e68dd2c6bf1489064db17a45d514, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -3160,11 +3263,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 973449598}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 
+  mTargetName: DoubleGreen
   mDatasetName: 
   mCastedBehaviour: {fileID: 973449598}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}
+--- !u!114 &973449601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 973449595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bac0686d40d5648449043da3d1dcf567, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: DoubleGreen
+  SplineGen: {fileID: 2004579111}
 --- !u!1 &982253022
 GameObject:
   m_ObjectHideFlags: 0
@@ -6773,6 +6890,7 @@ GameObject:
   - component: {fileID: 1948749743}
   - component: {fileID: 1948749742}
   - component: {fileID: 1948749741}
+  - component: {fileID: 1948749745}
   - component: {fileID: 1948749744}
   m_Layer: 0
   m_Name: DoubleBlue
@@ -6821,7 +6939,31 @@ MonoBehaviour:
     m_RotationOrder: 4
   OnTargetFound:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1948749745}
+        m_TargetAssemblyTypeName: tilescript, Assembly-CSharp
+        m_MethodName: setTile
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1948749745}
+        m_TargetAssemblyTypeName: tilescript, Assembly-CSharp
+        m_MethodName: DetectObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnTargetLost:
     m_PersistentCalls:
       m_Calls: []
@@ -6840,14 +6982,14 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 
+  mTrackableName: DoubleBlue
   mInitializedInEditor: 1
   mDataSetPath: 
-  mAspectRatio: 1
+  mAspectRatio: 1.5657492
   mImageTargetType: 3
-  mWidth: 0.2
+  mWidth: 0.12773438
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 0}
+  mRuntimeTexture: {fileID: 2800000, guid: 2d161ad3dda32ce4fa14daf6f9c6144f, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -6881,11 +7023,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 1948749742}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 
+  mTargetName: DoubleBlue
   mDatasetName: 
   mCastedBehaviour: {fileID: 1948749742}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}
+--- !u!114 &1948749745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948749739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bac0686d40d5648449043da3d1dcf567, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: DoubleBlue
+  SplineGen: {fileID: 2004579111}
 --- !u!1 &1955937444
 GameObject:
   m_ObjectHideFlags: 0

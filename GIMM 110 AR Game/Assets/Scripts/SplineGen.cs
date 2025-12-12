@@ -13,6 +13,12 @@ public class SplineGen : MonoBehaviour
     public GameObject BlueTile;
     public GameObject OrangeTile;
     public GameObject GreenTile;
+    public GameObject DoubleRedTile;
+    public GameObject DoublePurpleTile;
+    public GameObject DoubleYellowTile;
+    public GameObject DoubleBlueTile;
+    public GameObject DoubleOrangeTile;
+    public GameObject DoubleGreenTile;
 
     [Header("Board Tiles")]
     public GameObject[] boardTiles;
