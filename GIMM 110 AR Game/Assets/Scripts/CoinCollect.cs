@@ -13,6 +13,9 @@ public class CoinCollect : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         ScoreCounter.coinAmount += 1; // Increments the coin amount by 1.
+        
+        //FOR ZEE: add a line here that adds to the minigameScore in PlayerInfo.
+
         Destroy(gameObject);
         //Will need to add more logic for larger game when we have that
     }
