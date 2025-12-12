@@ -26,10 +26,7 @@ public class PlayerMovementStateMachine : MonoBehaviour
 
     }
 
-    private void OnEnable()
-    {
-        
-    }
+
 
     private void OnDisable()
     {
@@ -81,7 +78,7 @@ public class PlayerMovementStateMachine : MonoBehaviour
     {
         Debug.Log($"[PlayerMovementStateMachine] HandleSceneStateChange called with: {state?.GetType().Name ?? "null"}");
 
-        if (state is PlatformerMinigameState)
+        if (state is PlatformerMinigameState || state is ShooterMinigameState)
         {
             enabledByScene = true;
             SwitchState(new IdleState(this));

@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class BoardState : IMinigameState
 {
     private readonly MinigameStateMachine machine;
+    //private playerInfo player;
 
     public BoardState(MinigameStateMachine machine)
     {
@@ -13,6 +14,8 @@ public class BoardState : IMinigameState
     {
         Debug.Log("Entering board scene");
         SceneManager.LoadScene("Board");
+
+
     }
     public void Update()
     {

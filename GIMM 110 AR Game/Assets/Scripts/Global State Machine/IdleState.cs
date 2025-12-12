@@ -29,8 +29,6 @@ public class IdleState : IPlayerMovementState
         if (player.isGrounded())
         {
             machine.currentJumps = machine.maxJumps;
-
-            Debug.Log("Grounded");
         }
 
         // Check for horizontal movement input

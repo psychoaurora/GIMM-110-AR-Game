@@ -12,6 +12,7 @@ public class MinigameStateMachine : MonoBehaviour
                                                   
     public delegate void MinigameStateChanged(IMinigameState newState); /*Delegate is a keyword that defines what type of method this is.
                                                                          *It is just saying that the state changed with whatever new state it is. */
+    //public delegate void MinigameStateChanged(IMinigameState newPlayer);
                                                                          
     public event MinigameStateChanged OnStateChanged; //This line is the one actually telling other scripts who have subscribed the information.
 
@@ -86,5 +87,7 @@ public class MinigameStateMachine : MonoBehaviour
     {
         return currentState;
     }
+
+    
 }
   
