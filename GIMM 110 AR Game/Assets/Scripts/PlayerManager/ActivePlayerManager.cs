@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Splines;
 
 public class ActivePlayerManager : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class ActivePlayerManager : MonoBehaviour
             return;
         }
         Instance = this;
-        //DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(gameObject);
     }
 
     private void Start()
@@ -61,6 +62,16 @@ public class ActivePlayerManager : MonoBehaviour
         if (activePlayer != null)
         {
             return activePlayer.GetComponent<PlayerInfo>();
+        }
+        return null;
+    }
+
+    public SplineAnimate GetSplineAnimate()
+    {
+        GameObject activePlayer = GetActivePlayer();
+        if (activePlayer != null)
+        {
+            return activePlayer.GetComponent<SplineAnimate>();
         }
         return null;
     }

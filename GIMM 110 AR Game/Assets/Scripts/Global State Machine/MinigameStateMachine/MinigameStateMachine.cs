@@ -12,31 +12,35 @@ public class MinigameStateMachine : MonoBehaviour
                                                   
     public delegate void MinigameStateChanged(IMinigameState newState); /*Delegate is a keyword that defines what type of method this is.
                                                                          *It is just saying that the state changed with whatever new state it is. */
-    //public delegate void MinigameStateChanged(IMinigameState newPlayer);
                                                                          
     public event MinigameStateChanged OnStateChanged; //This line is the one actually telling other scripts who have subscribed the information.
 
+    public PlayerInfo activePlayerInfo;
+
     private IMinigameState currentState;
+
+    public float minigameTimer;
+    public bool timerActive = false;
 
     private void Awake()
     {
         if (Instance != null && Instance != this)
         {
-            //Destroy(gameObject);
+            Destroy(gameObject);
             return;
         }
         Instance = this;
-        //DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(gameObject);
     }
 
     void Start()
     {
         if (FindObjectsByType<MinigameStateMachine>(FindObjectsSortMode.None).Length > 1)
         {
-            //Destroy(gameObject);
+            Destroy(gameObject);
             return;
         }
-       // DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(gameObject);
         SwitchState(new BoardState(this));
     }
     
@@ -60,7 +64,7 @@ public class MinigameStateMachine : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            SwitchState(new ShooterMinigameState(this));
+            SwitchState(new HorizontalScroller(this));
             Debug.Log("3");
         }
         else if (Input.GetKeyDown(KeyCode.Alpha4))
@@ -68,7 +72,6 @@ public class MinigameStateMachine : MonoBehaviour
             SwitchState(new ShopState(this));
             Debug.Log("4");
         }
-        
     }
 
     public void SwitchState(IMinigameState newState)
@@ -89,7 +92,7 @@ public class MinigameStateMachine : MonoBehaviour
         return currentState;
     }
 
-    /*public void StartMinigameTimer()
+    public void StartMinigameTimer()
     {
         PlayerInfo activePlayerInfo = ActivePlayerManager.Instance.GetActivePlayerInfo();
 
@@ -99,6 +102,6 @@ public class MinigameStateMachine : MonoBehaviour
             timerActive = true;
             Debug.Log($"Minigame timer started: {minigameTimer} seconds");
         }
-    }*/
+    }
 }
   

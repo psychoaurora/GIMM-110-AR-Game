@@ -15,7 +15,7 @@ public class SingleRoomPlatformer : IMinigameState
         Debug.Log("Entering Single Room Platformer");
         SceneManager.LoadScene("SingleRoomPlatformer");
 
-        //Timer
+        
 
     }
 
@@ -26,6 +26,6 @@ public class SingleRoomPlatformer : IMinigameState
 
     public void Exit()
     {
-
+        
     }
 }
