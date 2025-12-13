@@ -68,7 +68,7 @@ public class SplineGen : MonoBehaviour
 
     void Update()
     {
-        HandleMovementKeys();
+        //HandleMovementKeys();
         HandleCardInput();
         HandleSpecialTiles();
 
@@ -81,22 +81,22 @@ public class SplineGen : MonoBehaviour
     // -------------------------------------------------------------
     // MOVEMENT INPUT
     // -------------------------------------------------------------
-    void HandleMovementKeys()
-    { // Draw spline path from current → destination
-      if (Input.GetKeyDown(KeyCode.E)) { if (destination >= 0 && destination < boardTiles.Length) 
-            { 
-                for (int i = currentTile; i <= destination; i++) AddSplinePoint(i); 
-            } 
-        } 
-      // Clear spline + update trackers
-      if (Input.GetKeyDown(KeyCode.Q)) 
-        { 
-            currentTracker = destination; 
-            currentTile = destination; 
-            currentTracker2 = destination; 
-            splineContainer.Spline.Clear(); 
-        } 
-    }
+    //void HandleMovementKeys()
+    //{ // Draw spline path from current → destination
+    //  if (Input.GetKeyDown(KeyCode.E)) { if (destination >= 0 && destination < boardTiles.Length) 
+    //        { 
+    //            for (int i = currentTile; i <= destination; i++) AddSplinePoint(i); 
+    //        } 
+    //    } 
+    //  // Clear spline + update trackers
+    //  if (Input.GetKeyDown(KeyCode.Q)) 
+    //    { 
+    //        currentTracker = destination; 
+    //        currentTile = destination; 
+    //        currentTracker2 = destination; 
+    //        splineContainer.Spline.Clear(); 
+    //    } 
+    //}
 
         // -------------------------------------------------------------
         // CARD INPUT
