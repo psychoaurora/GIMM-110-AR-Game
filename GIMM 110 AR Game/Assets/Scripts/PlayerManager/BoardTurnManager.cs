@@ -22,6 +22,7 @@ public class BoardTurnManager : MonoBehaviour
 
     private bool turnInProgress = false;
     private bool waitingForMinigame = false;
+    //private int wincount = 0;
 
     /*private void Start()
     {
@@ -93,6 +94,32 @@ public class BoardTurnManager : MonoBehaviour
         {
             Debug.Log("Player reached the winning tile!");
             // Handle win condition
+            winCount++;
+
+                //can be altered to match current coin system & player scripts
+                switch (winCount) 
+                {
+                    case 1:
+                        currentPlayer.GetComponent<ScoreCounter>.coinAmount = firstPlacePrize;
+                        break;
+                    case 2:
+                        currentPlayer.GetComponent<ScoreCounter>.coinAmount = secondPlacePrize;
+                        break;
+                    case 3:
+                        currentPlayer.GetComponent<ScoreCounter>.coinAmount = thirdPlacePrize;
+                        break;
+                    default:
+                        break;
+                }
+                //remove current player from turns
+
+                //if three players have finished (win count), end the game (seperate scene)
+                if(wincount >= 3) {
+                    if (SceneManager.GetActiveScene().name != "WinnerScene")
+                        SceneManager.LoadScene("WinnerScene");
+                }
+            }
+        }
             return;
         }
 
