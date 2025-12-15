@@ -7,7 +7,8 @@ public class MoveSpeedItem : ItemEffect
 
     public override void Apply(GameObject target)
     {
-        target.GetComponent<PlayerMovementStateMachine>().walkSpeed += amount;
-      
+        //target.GetComponent<PlayerMovementStateMachine>().walkSpeed += amount;
+
+        //.moveSpeedItemBought = true;
     }
 }

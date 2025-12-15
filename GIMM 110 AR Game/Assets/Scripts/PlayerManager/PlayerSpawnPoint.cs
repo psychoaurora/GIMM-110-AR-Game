@@ -4,9 +4,9 @@ public class PlayerSpawnPoint : MonoBehaviour
 {
     private void Start()
     {
-        if (ActivePlayerManager.Instance != null)
+        if (GameManager.Instance != null)
         {
-            GameObject activePlayer = ActivePlayerManager.Instance.GetActivePlayer();
+            GameObject activePlayer = GameManager.Instance.GetActivePlayer();
             if (activePlayer != null)
             {
                 activePlayer.transform.position = transform.position;

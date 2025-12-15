@@ -60,6 +60,8 @@ public class PlayerMovementStateMachine : MonoBehaviour
             return;
         }
         currentState?.Update();
+
+   
     }
 
     public void SwitchState(IPlayerMovementState newState)

@@ -7,6 +7,8 @@ public class JumpBuffItem : ItemEffect
 
     public override void Apply(GameObject target)
     {
-        target.GetComponent<PlayerMovementStateMachine>().jumpForce += amount;
+        //target.GetComponent<PlayerMovementStateMachine>().jumpForce += amount;
+
+        //scenePlayerInfo.jumpBuffItemBought = true;
     }
 }
