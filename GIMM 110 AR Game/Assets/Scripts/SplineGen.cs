@@ -219,7 +219,7 @@ public class SplineGen : MonoBehaviour
             for (int i = currentTile; i <= destination; i++) AddSplinePoint(i);
         }
 
-        SplineAnimate activePlayer = ActivePlayerManager.Instance.GetSplineAnimate();
+        SplineAnimate activePlayer = GameManager.Instance.GetSplineAnimate();
 
         activePlayer.Restart(true);
 

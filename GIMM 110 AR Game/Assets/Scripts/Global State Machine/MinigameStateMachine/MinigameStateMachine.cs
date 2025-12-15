@@ -15,7 +15,7 @@ public class MinigameStateMachine : MonoBehaviour
                                                                          
     public event MinigameStateChanged OnStateChanged; //This line is the one actually telling other scripts who have subscribed the information.
 
-    public PlayerInfo activePlayerInfo;
+    public PlayerData activePlayerInfo;
 
     private IMinigameState currentState;
 
@@ -94,14 +94,20 @@ public class MinigameStateMachine : MonoBehaviour
 
     public void StartMinigameTimer()
     {
-        PlayerInfo activePlayerInfo = ActivePlayerManager.Instance.GetActivePlayerInfo();
+        PlayerData activePlayerData = GameManager.Instance.GetActivePlayerData();
 
         if (activePlayerInfo != null)
         {
-            minigameTimer = activePlayerInfo.timePerMinigame;
+            minigameTimer = activePlayerData.minigameTimeLimit;
             timerActive = true;
             Debug.Log($"Minigame timer started: {minigameTimer} seconds");
         }
     }
+    public void StopMinigameTimer()
+    {
+                timerActive = false;
+        Debug.Log("Minigame timer stopped");
+    }
 }
+
   

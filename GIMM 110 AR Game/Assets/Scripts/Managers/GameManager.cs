@@ -1,12 +1,12 @@
 using UnityEngine;
 using UnityEngine.Splines;
 
-public class ActivePlayerManager : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
-    public static ActivePlayerManager Instance;
+    public static GameManager Instance;
 
     public GameObject[] allPlayers; // Assign all 4 player prefabs/GameObjects
-    public int activePlayerIndex = 0; // Which player is currently active (0-3)
+    public int activePlayerIndex = 0;
 
     private void Awake()
     {
@@ -56,14 +56,51 @@ public class ActivePlayerManager : MonoBehaviour
         Debug.Log($"Player {activePlayerIndex + 1} is now active");
     }
 
-    public PlayerInfo GetActivePlayerInfo()
+    public GameObject GetActivePlayer()
+    {
+        if (activePlayerIndex >= 0 && activePlayerIndex < allPlayers.Length)
+        {
+            return allPlayers[activePlayerIndex];
+        }
+        return null;
+    }
+    public PlayerData GetActivePlayerData()
     {
         GameObject activePlayer = GetActivePlayer();
         if (activePlayer != null)
         {
-            return activePlayer.GetComponent<PlayerInfo>();
+            return activePlayer.GetComponent<PlayerData>();
         }
         return null;
+    }
+
+    public void SwitchToNextPlayer()
+    {
+        activePlayerIndex = (activePlayerIndex + 1) % allPlayers.Length;
+        UpdateActivePlayer();
+
+        PlayerData currentPlayer = GetActivePlayerData();
+        if (currentPlayer != null)
+        {
+            Debug.Log($"Now it's {currentPlayer.playerName}'s turn");
+        }
+    }
+
+    /*public void SwitchToPreviousPlayer()
+    {
+        int prevIndex = (activePlayerIndex - 1 + allPlayers.Length) % allPlayers.Length;
+        SetActivePlayer(prevIndex);
+    }*/
+    private void UpdateActivePlayer()
+    {
+        // Show only the active player, hide others
+        for (int i = 0; i < allPlayers.Length; i++)
+        {
+            if (allPlayers[i] != null)
+            {
+                allPlayers[i].SetActive(i == activePlayerIndex);
+            }
+        }
     }
 
     public SplineAnimate GetSplineAnimate()
@@ -74,27 +111,7 @@ public class ActivePlayerManager : MonoBehaviour
             return activePlayer.GetComponent<SplineAnimate>();
         }
         return null;
+
     }
 
-    public GameObject GetActivePlayer()
-    {
-        if (activePlayerIndex >= 0 && activePlayerIndex < allPlayers.Length)
-        {
-            return allPlayers[activePlayerIndex];
-        }
-        return null;
-    }
-
-    public void SwitchToNextPlayer()
-    {
-        int nextIndex = (activePlayerIndex + 1) % allPlayers.Length;
-        SetActivePlayer(nextIndex);
-        Debug.Log("Switched to next player");
-    }
-
-    public void SwitchToPreviousPlayer()
-    {
-        int prevIndex = (activePlayerIndex - 1 + allPlayers.Length) % allPlayers.Length;
-        SetActivePlayer(prevIndex);
-    }
 }

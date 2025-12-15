@@ -7,7 +7,9 @@ public class DoubleJumpItem : ItemEffect
 
     public override void Apply(GameObject target)
     {
-        target.GetComponent<PlayerMovementStateMachine>().maxJumps += amount;
+        //target.GetComponent<PlayerMovementStateMachine>().maxJumps += amount;
+
+        //scenePlayerInfo.doubleJumpItemBought = true;
     }
 }
 

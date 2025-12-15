@@ -21,50 +21,48 @@ public class BoardState : IMinigameState
             SceneManager.LoadScene("Board");
         }
 
-        
-
         // Stop any minigame timer
-
-        //machine.StopMinigameTimer();
+        machine.StopMinigameTimer();
 
         // If returning from a minigame, advance to next player
         if (returningFromMinigame)
         {
-            if (ActivePlayerManager.Instance != null)
+            if (GameManager.Instance != null)
             {
-                ActivePlayerManager.Instance.SwitchToNextPlayer();
+                GameManager.Instance.SwitchToNextPlayer(); // Match your GameManager method name
             }
             returningFromMinigame = false;
         }
 
-        // Wait a frame for scene to fully load, then start turn
-        // (In practice, you'd use SceneManager.sceneLoaded event)
-        WaitAndStartTurn();
+        // Display current player info
+        LogCurrentPlayerInfo();
     }
 
-    private async void WaitAndStartTurn()
+    private void LogCurrentPlayerInfo()
     {
-        await System.Threading.Tasks.Task.Delay(100); // Wait 0.1 seconds
-
-        // Find the BoardTurnManager in the scene and start the turn
-        BoardTurnManager turnManager = GameObject.FindAnyObjectByType<BoardTurnManager>();
-        if (turnManager != null)
+        if (GameManager.Instance != null)
         {
-            turnManager.StartPlayerTurn();
-        }
-        else
-        {
-            Debug.LogError("BoardTurnManager not found in Board scene!");
+            PlayerData currentPlayer = GameManager.Instance.GetActivePlayerData();
+            if (currentPlayer != null)
+            {
+                Debug.Log($"=== {currentPlayer.playerName}'s Turn ===");
+                Debug.Log($"Total Score: {currentPlayer.totalScore}");
+                Debug.Log($"Coins Collected: {currentPlayer.coinsCollected}");
+            }
         }
     }
 
     public void Update()
     {
-        // BoardTurnManager handles all the turn logic
+        // Board game logic here
+        // (Card drawing, movement, shop, etc.)
 
+        // TEMPORARY: Press Y to skip to next player (REMOVE LATER)
         if (Input.GetKeyDown(KeyCode.Y))
         {
-            ActivePlayerManager.Instance.SwitchToNextPlayer();
+            Debug.Log("Manually advancing to next player");
+            GameManager.Instance.SwitchToNextPlayer();
+            LogCurrentPlayerInfo();
         }
     }
 

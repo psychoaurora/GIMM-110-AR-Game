@@ -7,7 +7,9 @@ public class AddTimeItem : ItemEffect
 
     public override void Apply(GameObject target)
     {
-        target.GetComponent<PlayerInfo>().timePerMinigame += amount;
+        //target.GetComponent<PlayerInfo>().timePerMinigame += amount;
+
+        //scenePlayerInfo.addTimeItemBought = true;
     }
 }
 

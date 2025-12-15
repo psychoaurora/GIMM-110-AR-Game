@@ -1,24 +1,37 @@
-﻿using UnityEngine;
+﻿using JetBrains.Annotations;
+using UnityEngine;
 
 public class CoinCollect : MonoBehaviour
 {
+    GameObject timermanager;
+    
 
-    //Remember to add the temp coins
+    private void Start()
+    {
+        timermanager = GameObject.Find("TimerManager");
 
-    #region Variables
-    //Empty for now but will probably need to add variable to track coins for whole game
-    #endregion
+
+    }
 
     #region Unity Methods
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        ScoreCounter.coinAmount += 1; // Increments the coin amount by 1.
-        
-        //FOR ZEE: add a line here that adds to the minigameScore in PlayerInfo.
+        MinigameStateMachine.Instance.GetCurrentState();
 
-        Destroy(gameObject);
-        //Will need to add more logic for larger game when we have that
+        if (collision.CompareTag("Player"))
+        {
+            if (CompareTag("Coin"))
+            {
+                timermanager.GetComponent<TimerManager>().DeactivateAndActivate(gameObject, 3f);
+
+                Debug.Log("Deactivated the game object");
+            }
+            ScoreCounter.coinAmount += 1; // Increments the coin amount by 1.
+            scenePlayerInfo.Instance.coinsCollected += 1;
+
+            
+        }
+        #endregion
     }
-    #endregion
 }
 

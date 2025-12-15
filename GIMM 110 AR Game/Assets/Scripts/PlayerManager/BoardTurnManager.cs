@@ -40,7 +40,7 @@ public class BoardTurnManager : MonoBehaviour
         turnInProgress = true;
         waitingForMinigame = false;
 
-        Debug.Log($"Player {ActivePlayerManager.Instance.activePlayerIndex + 1}'s turn starting");
+        Debug.Log($"Player {GameManager.Instance.activePlayerIndex + 1}'s turn starting");
 
         // Show shop button
         if (shopButton != null)
@@ -153,9 +153,9 @@ public class BoardTurnManager : MonoBehaviour
 
     private void AdvanceToNextPlayer()
     {
-        if (ActivePlayerManager.Instance != null)
+        if (GameManager.Instance != null)
         {
-            ActivePlayerManager.Instance.SwitchToNextPlayer();
+            GameManager.Instance.SwitchToNextPlayer();
 
             // Start the next player's turn
             Invoke(nameof(StartPlayerTurn), 0.5f); // Small delay for clarity

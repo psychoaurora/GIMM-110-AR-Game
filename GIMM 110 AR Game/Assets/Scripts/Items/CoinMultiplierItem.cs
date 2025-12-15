@@ -7,7 +7,9 @@ public class CoinMultiplierItem : ItemEffect
 
     public override void Apply(GameObject target)
     {
-        //target.GetComponent<PlayerInfo>().coinMultiplier += amount;
+        //target.GetComponent<PlayerInfo>().coinPointAddition += amount;
+        
+        //scenePlayerInfo.coinMultiplierItemBought = true;
     }
 }
 
