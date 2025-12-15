@@ -182,7 +182,7 @@ GameObject:
   - component: {fileID: 155358176}
   m_Layer: 0
   m_Name: RedPlayer
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -265,7 +265,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
   m_Color: {r: 0.7735849, g: 0.20872192, b: 0.23967509, a: 1}
   m_FlipX: 0
@@ -331,7 +331,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerName: RedPlayer
-  playerColor: {r: 0.8962264, g: 0.13894969, b: 0.13105197, a: 0}
+  playerColor: {r: 0.8962264, g: 0.13894969, b: 0.13105197, a: 1}
   totalScore: 0
   boardPosition: 0
   coinsCollected: 0
@@ -375,7 +375,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 807774862}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -453,7 +453,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 942322557}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -785,7 +785,7 @@ GameObject:
   - component: {fileID: 1359191127}
   m_Layer: 0
   m_Name: YellowPlayer
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -868,7 +868,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
   m_Color: {r: 0.86415094, g: 0.8543632, b: 0.18098256, a: 1}
   m_FlipX: 0
@@ -934,7 +934,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerName: YellowPlayer
-  playerColor: {r: 0.9150943, g: 0.89894927, b: 0.12517802, a: 0}
+  playerColor: {r: 0.9150943, g: 0.89894927, b: 0.12517802, a: 1}
   totalScore: 0
   boardPosition: 0
   coinsCollected: 0
@@ -955,7 +955,7 @@ GameObject:
   - component: {fileID: 1449400113}
   m_Layer: 0
   m_Name: GreenPlayer
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1038,7 +1038,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
   m_Color: {r: 0.19424741, g: 0.7433963, b: 0.17252399, a: 1}
   m_FlipX: 0
@@ -1104,7 +1104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerName: GreenPlayer
-  playerColor: {r: 0.122774996, g: 0.8396226, b: 0.16369285, a: 0}
+  playerColor: {r: 0.122774996, g: 0.8396226, b: 0.16369285, a: 1}
   totalScore: 0
   boardPosition: 0
   coinsCollected: 0
@@ -1148,7 +1148,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1797168045}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -1276,7 +1276,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1913183173}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -1431,9 +1431,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
-  m_Color: {r: 0.5414382, g: 0.59705573, b: 0.85660374, a: 1}
+  m_Color: {r: 0.15136522, g: 0.026721206, b: 0.5245282, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

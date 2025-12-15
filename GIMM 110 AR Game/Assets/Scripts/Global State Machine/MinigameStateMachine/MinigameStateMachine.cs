@@ -67,11 +67,6 @@ public class MinigameStateMachine : MonoBehaviour
             SwitchState(new HorizontalScroller(this));
             Debug.Log("3");
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha4))
-        {
-            SwitchState(new ShopState(this));
-            Debug.Log("4");
-        }
     }
 
     public void SwitchState(IMinigameState newState)

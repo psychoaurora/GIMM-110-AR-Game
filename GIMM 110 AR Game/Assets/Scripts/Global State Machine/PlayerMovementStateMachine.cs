@@ -77,7 +77,7 @@ public class PlayerMovementStateMachine : MonoBehaviour
     {
         Debug.Log($"[PlayerMovementStateMachine] HandleSceneStateChange called with: {state?.GetType().Name ?? "null"}");
 
-        if (state is PlatformerMinigameState || state is HorizontalScroller || state is SingleRoomPlatformer || state is VerticalScroller || state is TimelessHorizontal)
+        if (state is HorizontalScroller || state is SingleRoomPlatformer)
         {
             enabledByScene = true;
             SwitchState(new IdleState(this));
