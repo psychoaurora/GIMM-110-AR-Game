@@ -5,12 +5,9 @@ public class CoinCollect : MonoBehaviour
 {
     GameObject timermanager;
     
-
     private void Start()
     {
         timermanager = GameObject.Find("TimerManager");
-
-
     }
 
     #region Unity Methods
@@ -27,9 +24,9 @@ public class CoinCollect : MonoBehaviour
                 Debug.Log("Deactivated the game object");
             }
             ScoreCounter.coinAmount += 1; // Increments the coin amount by 1.
-            scenePlayerInfo.Instance.coinsCollected += 1;
+            scenePlayerInfo.Instance.temporaryScore += 1;
 
-            
+
         }
         #endregion
     }
