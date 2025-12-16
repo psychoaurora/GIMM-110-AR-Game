@@ -645,13 +645,14 @@ GameObject:
   - component: {fileID: 191519544}
   - component: {fileID: 191519543}
   - component: {fileID: 191519542}
+  - component: {fileID: 191519547}
   m_Layer: 0
   m_Name: YellowPlayer
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &191519541
 Transform:
   m_ObjectHideFlags: 0
@@ -687,7 +688,7 @@ MonoBehaviour:
   m_Duration: 5
   m_MaxSpeed: 0
   m_EasingMode: 0
-  m_AlignmentMode: 3
+  m_AlignmentMode: 1
   m_ObjectForwardAxis: 2
   m_ObjectUpAxis: 1
   m_StartOffset: 0
@@ -740,10 +741,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd126d3c28cccf84c9a565822e731e9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInfo
-  scoreTotal: 0
-  minigameScore: 0
-  coinPointAddition: 1
-  timePerMinigame: 15
 --- !u!212 &191519546
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -799,6 +796,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &191519547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 191519540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fce521aa6d5abb41a2371f4345129d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerName: 
+  playerColor: {r: 0, g: 0, b: 0, a: 0}
+  totalScore: 0
+  boardPosition: 0
+  coinsCollected: 0
+  minigameTimeLimit: 0
 --- !u!1 &194460398
 GameObject:
   m_ObjectHideFlags: 0
@@ -1694,59 +1709,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1865315705}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &584075103
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 584075105}
-  - component: {fileID: 584075104}
-  m_Layer: 0
-  m_Name: BoardTurnManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &584075104
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 584075103}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aae6ff3666f8edb429cd1373dfc4593f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BoardTurnManager
-  shopButton: {fileID: 0}
-  cardDisplay: {fileID: 0}
-  gingerbreadManTile: 0
-  candyCaneTile: 0
-  gumdropTile: 0
-  peanutTile: 0
-  lollipopTile: 0
-  iceCreamTile: 0
-  winningTile: 0
---- !u!4 &584075105
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 584075103}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.06157, y: 0.0247, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &603720473
 GameObject:
@@ -2944,10 +2906,10 @@ GameObject:
   m_Component:
   - component: {fileID: 854915523}
   - component: {fileID: 854915528}
-  - component: {fileID: 854915527}
   - component: {fileID: 854915526}
   - component: {fileID: 854915525}
   - component: {fileID: 854915524}
+  - component: {fileID: 854915529}
   m_Layer: 0
   m_Name: BluePlayer
   m_TagString: Player
@@ -2990,7 +2952,7 @@ MonoBehaviour:
   m_Duration: 5
   m_MaxSpeed: 0
   m_EasingMode: 0
-  m_AlignmentMode: 3
+  m_AlignmentMode: 1
   m_ObjectForwardAxis: 2
   m_ObjectUpAxis: 1
   m_StartOffset: 0
@@ -3031,22 +2993,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   groundCheckRadius: 0.2
---- !u!114 &854915527
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 854915522}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd126d3c28cccf84c9a565822e731e9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerInfo
-  scoreTotal: 0
-  minigameScore: 0
-  coinPointAddition: 1
-  timePerMinigame: 15
 --- !u!212 &854915528
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3102,6 +3048,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &854915529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854915522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fce521aa6d5abb41a2371f4345129d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerName: 
+  playerColor: {r: 0, g: 0, b: 0, a: 0}
+  totalScore: 0
+  boardPosition: 0
+  coinsCollected: 0
+  minigameTimeLimit: 0
 --- !u!1 &857929830
 GameObject:
   m_ObjectHideFlags: 0
@@ -4457,13 +4421,14 @@ GameObject:
   - component: {fileID: 1166210174}
   - component: {fileID: 1166210173}
   - component: {fileID: 1166210172}
+  - component: {fileID: 1166210177}
   m_Layer: 0
   m_Name: RedPlayer
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1166210171
 Transform:
   m_ObjectHideFlags: 0
@@ -4499,7 +4464,7 @@ MonoBehaviour:
   m_Duration: 5
   m_MaxSpeed: 0
   m_EasingMode: 0
-  m_AlignmentMode: 3
+  m_AlignmentMode: 1
   m_ObjectForwardAxis: 2
   m_ObjectUpAxis: 1
   m_StartOffset: 0
@@ -4552,10 +4517,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd126d3c28cccf84c9a565822e731e9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInfo
-  scoreTotal: 0
-  minigameScore: 0
-  coinPointAddition: 1
-  timePerMinigame: 15
 --- !u!212 &1166210176
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4611,6 +4572,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1166210177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1166210170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fce521aa6d5abb41a2371f4345129d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerName: 
+  playerColor: {r: 0, g: 0, b: 0, a: 0}
+  totalScore: 0
+  boardPosition: 0
+  coinsCollected: 0
+  minigameTimeLimit: 0
 --- !u!1 &1184588846
 GameObject:
   m_ObjectHideFlags: 0
@@ -5160,13 +5139,14 @@ GameObject:
   - component: {fileID: 1306478013}
   - component: {fileID: 1306478012}
   - component: {fileID: 1306478011}
+  - component: {fileID: 1306478016}
   m_Layer: 0
   m_Name: GreenPlayer
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1306478010
 Transform:
   m_ObjectHideFlags: 0
@@ -5202,7 +5182,7 @@ MonoBehaviour:
   m_Duration: 5
   m_MaxSpeed: 0
   m_EasingMode: 0
-  m_AlignmentMode: 3
+  m_AlignmentMode: 1
   m_ObjectForwardAxis: 2
   m_ObjectUpAxis: 1
   m_StartOffset: 0
@@ -5255,10 +5235,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd126d3c28cccf84c9a565822e731e9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInfo
-  scoreTotal: 0
-  minigameScore: 0
-  coinPointAddition: 1
-  timePerMinigame: 15
 --- !u!212 &1306478015
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5314,6 +5290,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1306478016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1306478009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fce521aa6d5abb41a2371f4345129d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerName: 
+  playerColor: {r: 0, g: 0, b: 0, a: 0}
+  totalScore: 0
+  boardPosition: 0
+  coinsCollected: 0
+  minigameTimeLimit: 0
 --- !u!1 &1310437238
 GameObject:
   m_ObjectHideFlags: 0
@@ -7448,8 +7442,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MinigameStateMachine
   activePlayerInfo: {fileID: 0}
-  minigameTimer: 0
-  timerActive: 0
+  GambleResult: 0
 --- !u!4 &1900616948
 Transform:
   m_ObjectHideFlags: 0
@@ -8548,6 +8541,5 @@ SceneRoots:
   - {fileID: 214451348}
   - {fileID: 1765284794}
   - {fileID: 690080152}
-  - {fileID: 584075105}
   - {fileID: 1681206237}
   - {fileID: 1900616948}

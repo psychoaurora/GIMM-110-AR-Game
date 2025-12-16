@@ -1,4 +1,5 @@
 ﻿using JetBrains.Annotations;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class CoinCollect : MonoBehaviour
@@ -24,6 +25,7 @@ public class CoinCollect : MonoBehaviour
                 Debug.Log("Deactivated the game object");
             }
             scenePlayerInfo.Instance.temporaryScore += 1;
+            Destroy(gameObject);
         }
         #endregion
     }

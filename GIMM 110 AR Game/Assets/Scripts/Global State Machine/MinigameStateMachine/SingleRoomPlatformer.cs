@@ -18,8 +18,6 @@ public class SingleRoomPlatformer : IMinigameState
         Debug.Log("Entering Single Room Platformer");
         SceneManager.LoadScene("SingleRoomPlatformer", LoadSceneMode.Additive);
 
-        //machine.StartMinigameTimer();
-
         IMinigameState singleRoomPlatformer = this;
 
         timerManager = GameObject.Find("TimerManager");

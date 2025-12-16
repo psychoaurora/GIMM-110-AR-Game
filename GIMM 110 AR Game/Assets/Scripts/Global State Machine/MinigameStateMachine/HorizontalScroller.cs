@@ -6,6 +6,8 @@ public class HorizontalScroller : IMinigameState
 {
     private readonly MinigameStateMachine machine;
 
+    GameObject timerManager;
+
     public HorizontalScroller(MinigameStateMachine machine)
     {
         this.machine = machine;
@@ -14,7 +16,13 @@ public class HorizontalScroller : IMinigameState
     public void Enter()
     {
         Debug.Log("Entered Horizontal scroller");
-        SceneManager.LoadScene("HorizontalScroller");
+        SceneManager.LoadScene("HorizontalScroller", LoadSceneMode.Additive);
+
+        IMinigameState horizontalScroller = this;
+
+        timerManager = GameObject.Find("TimerManager");
+
+        timerManager.GetComponent<TimerManager>().StartSceneTimer(15f, horizontalScroller);
     }
     public void Update()
     {
@@ -22,6 +30,6 @@ public class HorizontalScroller : IMinigameState
     }
     public void Exit()
     {
-
+        SceneManager.UnloadSceneAsync("HorizontalScroller");
     }
 }
