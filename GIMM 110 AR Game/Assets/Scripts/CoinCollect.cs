@@ -23,10 +23,7 @@ public class CoinCollect : MonoBehaviour
 
                 Debug.Log("Deactivated the game object");
             }
-            ScoreCounter.coinAmount += 1; // Increments the coin amount by 1.
             scenePlayerInfo.Instance.temporaryScore += 1;
-
-
         }
         #endregion
     }

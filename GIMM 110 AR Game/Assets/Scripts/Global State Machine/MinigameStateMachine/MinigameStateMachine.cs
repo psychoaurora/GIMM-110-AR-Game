@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
@@ -19,8 +19,7 @@ public class MinigameStateMachine : MonoBehaviour
 
     private IMinigameState currentState;
 
-    public float minigameTimer;
-    public bool timerActive = false;
+    public int GambleResult = 0;
 
     private void Awake()
     {
@@ -48,6 +47,12 @@ public class MinigameStateMachine : MonoBehaviour
     {
         HandleInput();
         currentState?.Update();
+
+        /*if (minigameTimer <= 0f)
+        {
+            EndMinigame();
+            timerActive = false;
+        }*/
     }
 
     private void HandleInput()
@@ -67,6 +72,23 @@ public class MinigameStateMachine : MonoBehaviour
             SwitchState(new HorizontalScroller(this));
             Debug.Log("3");
         }
+
+        /*if (Input.GetKeyDown(KeyCode.A))
+        {
+            GambleResult = UnityEngine.Random.Range(1, 2);
+            if (GambleResult == 1)
+            {
+                Debug.Log("result 1");
+                SwitchState(new SingleRoomPlatformer(this));
+                GambleResult = 0;
+            }
+            if (GambleResult == 2)
+            {
+                Debug.Log("result 2");
+                SwitchState(new HorizontalScroller(this));
+                GambleResult = 0;
+            }
+        }*/
     }
 
     public void SwitchState(IMinigameState newState)
@@ -87,21 +109,25 @@ public class MinigameStateMachine : MonoBehaviour
         return currentState;
     }
 
-    public void StartMinigameTimer()
-    {
-        PlayerData activePlayerData = GameManager.Instance.GetActivePlayerData();
-
-        if (activePlayerInfo != null)
-        {
-            minigameTimer = activePlayerData.minigameTimeLimit;
-            timerActive = true;
-            Debug.Log($"Minigame timer started: {minigameTimer} seconds");
-        }
-    }
     public void StopMinigameTimer()
     {
-                timerActive = false;
-        Debug.Log("Minigame timer stopped");
+        EndMinigame();
+    }
+    
+
+    private void EndMinigame()
+    {
+        Debug.Log("🏁 EndMinigame() called");
+
+        if (scenePlayerInfo.Instance != null)
+        {
+            scenePlayerInfo.Instance.EndMinigame();  
+        }
+        else
+        {
+            Debug.LogWarning("MinigameSession.Instance is NULL, going to board anyway");
+            SwitchState(new BoardState(this));
+        }
     }
 }
 
