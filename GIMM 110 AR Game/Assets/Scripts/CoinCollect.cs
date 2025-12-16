@@ -1,21 +1,34 @@
-﻿using UnityEngine;
+﻿using JetBrains.Annotations;
+using UnityEngine;
 
 public class CoinCollect : MonoBehaviour
 {
-
-    //Remember to add the temp coins
-
-    #region Variables
-    //Empty for now but will probably need to add variable to track coins for whole game
-    #endregion
+    GameObject timermanager;
+    
+    private void Start()
+    {
+        timermanager = GameObject.Find("TimerManager");
+    }
 
     #region Unity Methods
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        ScoreCounter.coinAmount += 1; // Increments the coin amount by 1.
-        Destroy(gameObject);
-        //Will need to add more logic for larger game when we have that
+        MinigameStateMachine.Instance.GetCurrentState();
+
+        if (collision.CompareTag("Player"))
+        {
+            if (CompareTag("Coin"))
+            {
+                timermanager.GetComponent<TimerManager>().DeactivateAndActivate(gameObject, 3f);
+
+                Debug.Log("Deactivated the game object");
+            }
+            ScoreCounter.coinAmount += 1; // Increments the coin amount by 1.
+            scenePlayerInfo.Instance.temporaryScore += 1;
+
+
+        }
+        #endregion
     }
-    #endregion
 }
 
