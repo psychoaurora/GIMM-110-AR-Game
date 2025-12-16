@@ -1,26 +1,26 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem.XR.Haptics;
 
-public class TimerManager : MonoBehaviour //Should this class be a child of the minigamestatemachine?
+public class TimerManager : MonoBehaviour 
 {
-    //Remember to add the timer in here for the temporary coins in the one room minigame. 
 
-    public void StartSceneTimer(float SceneTimeLength) /*With the State machine, on enter calls this method. 
-                                                        * This parameter will be the minigameTime in the PlayerInfo class.
-                                                        */ 
+
+    public void StartSceneTimer(float SceneTimeLength, IMinigameState currentState) 
     {
-        StartCoroutine(SceneTime(SceneTimeLength));
+        StartCoroutine(SceneTime(SceneTimeLength, currentState));
 
     }
 
-    IEnumerator SceneTime(float SceneTimeLength)
+    IEnumerator SceneTime(float SceneTimeLength, IMinigameState currentState)
     {
-        //Probably need to add mroe here to switch between scenes, but this is it for now.
         yield return new WaitForSeconds(SceneTimeLength);
+
         //Calling the exit method here in whatever scene. Probably add another parameter in StartSceneTimer()
+        Debug.Log("Scene Time Ended");
+        MinigameStateMachine.Instance.StopMinigameTimer();
     }
 
-    // Add this method to your TimerManager class to fix CS1061
     public void DeactivateAndActivate(GameObject target, float delay)
     {
         StartCoroutine(DeactivateAndActivateCoroutine(target, delay));

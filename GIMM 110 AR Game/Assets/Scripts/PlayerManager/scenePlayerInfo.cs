@@ -2,20 +2,11 @@ using UnityEngine;
 
 public class scenePlayerInfo : MonoBehaviour
 {
-    /*public static int minigameCoins;
-
-    public static bool addTimeItemBought = false;
-    public static bool coinMultiplierItemBought = false;
-    public static bool moveSpeedItemBought = false;
-    public static bool jumpBuffItemBought = false;
-    public static bool doubleJumpItemBought = false;*/
-
     public static scenePlayerInfo Instance;
 
     [Header("Session Data")]
     public PlayerData currentPlayerData;
     public int temporaryScore = 0;
-    public int coinsCollected = 0;
 
     [Header("References")]
     public GameObject minigamePlayer; // The generic player controller
@@ -58,16 +49,6 @@ public class scenePlayerInfo : MonoBehaviour
         }
     }
 
-    public void AddCoin()
-    {
-        if (GameManager.Instance == null) return;
-
-        coinsCollected++;
-        //temporaryScore += GameManager.Instance.coinPointValue;
-
-        Debug.Log($"{currentPlayerData.playerName} collected coin! Temp score: {temporaryScore}");
-    }
-
     public void AddPoints(int points)
     {
         temporaryScore += points;
@@ -78,11 +59,11 @@ public class scenePlayerInfo : MonoBehaviour
     {
         if (currentPlayerData != null)
         {
-            Debug.Log($"Transferring {temporaryScore} points and {coinsCollected} coins to {currentPlayerData.playerName}");
+            Debug.Log($"Transferring {temporaryScore} points to {currentPlayerData.playerName}");
 
             // Transfer temporary data to the permanent player component
             currentPlayerData.AddScore(temporaryScore);
-            currentPlayerData.AddCoins(coinsCollected);
+
         }
         else
         {

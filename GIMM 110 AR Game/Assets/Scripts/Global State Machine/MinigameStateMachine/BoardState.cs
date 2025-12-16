@@ -20,12 +20,7 @@ public class BoardState : IMinigameState
         {
             SceneManager.LoadScene("Board");
         }
-
         
-
-        // Stop any minigame timer
-        machine.StopMinigameTimer();
-
         // If returning from a minigame, advance to next player
         if (returningFromMinigame)
         {
