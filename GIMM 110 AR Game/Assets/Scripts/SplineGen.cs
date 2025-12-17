@@ -104,12 +104,12 @@ public class SplineGen : MonoBehaviour
         void HandleCardInput()
     {
         // Character tile keys
-        //if (Input.GetKeyDown(KeyCode.R)) destination = gingerbreadMan;
-        //else if (Input.GetKeyDown(KeyCode.T)) destination = candyCane;
-        //else if (Input.GetKeyDown(KeyCode.Z)) destination = gumdrop;
-        //else if (Input.GetKeyDown(KeyCode.X)) destination = peanut;
-        //else if (Input.GetKeyDown(KeyCode.J)) destination = lollipop;
-        //else if (Input.GetKeyDown(KeyCode.K)) destination = iceCream;
+        if (Input.GetKeyDown(KeyCode.R)) destination = gingerbreadMan;
+        else if (Input.GetKeyDown(KeyCode.T)) destination = candyCane;
+        else if (Input.GetKeyDown(KeyCode.Z)) destination = gumdrop;
+        else if (Input.GetKeyDown(KeyCode.X)) destination = peanut;
+        else if (Input.GetKeyDown(KeyCode.J)) destination = lollipop;
+        else if (Input.GetKeyDown(KeyCode.K)) destination = iceCream;
         //// Single color via Vuforia tracking
         //else if (RedTile.GetComponent<ImageTargetBehaviour>()) FindSingleTile(redTiles);
         ////StartCoroutine(SplineCreator()); 
@@ -157,12 +157,6 @@ public class SplineGen : MonoBehaviour
 
         if (currentTracker2 == bridgeStart2)
             ApplyBridge(bridgeStart2, bridgeEnd2);
-    }
-
-    public void CharacterCard()
-    {
-        destination = gingerbreadMan;
-
     }
 
     // -------------------------------------------------------------
@@ -213,32 +207,6 @@ public class SplineGen : MonoBehaviour
             }
         }
     }
-
-    public void Gingerbreadman()
-    {
-        destination = gingerbreadMan;
-    }
-    public void CandyCane()
-    {
-        destination = candyCane;
-    }
-    public void Gumdrop()
-    {
-        destination = gumdrop;
-    }
-    public void PeaNut()
-    {
-        destination = peanut;
-    }
-    public void LolliPop()
-    {
-        destination = lollipop;
-    }
-    public void IceCream()
-    {
-        destination = iceCream;
-    }
-
     void ApplyBridge(int start, int end)
     {
         AddSplinePoint(start);
