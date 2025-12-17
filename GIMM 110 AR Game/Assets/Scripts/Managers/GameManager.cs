@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
     public GameObject[] allPlayers; // Assign all 4 player prefabs/GameObjects
     public int activePlayerIndex = 0;
 
+    GameObject spline;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -32,6 +34,8 @@ public class GameManager : MonoBehaviour
 
         // Only activate the first player initially
         SetActivePlayer(activePlayerIndex);
+
+        spline = GameObject.Find("Spline");
     }
 
     public void SetActivePlayer(int index)
@@ -99,10 +103,22 @@ public class GameManager : MonoBehaviour
             if (allPlayers[i] != null)
             {
                 allPlayers[i].SetActive(i == activePlayerIndex);
+                UpdatePlayerPosition();
             }
         }
     }
 
+    
+
+    private void UpdatePlayerPosition()
+    {
+        PlayerData currentPlayer = GetActivePlayerData();
+        spline.GetComponent<SplineGen>().currentTile = currentPlayer.boardPosition;
+        spline.GetComponent<SplineGen>().currentTracker = currentPlayer.boardPosition;
+        spline.GetComponent<SplineGen>().currentTracker2 = currentPlayer.boardPosition;
+
+
+    }
     public SplineAnimate GetSplineAnimate()
     {
         GameObject activePlayer = GetActivePlayer();

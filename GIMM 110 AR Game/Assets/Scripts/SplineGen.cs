@@ -227,6 +227,11 @@ public class SplineGen : MonoBehaviour
 
         currentTracker = destination;
         currentTile = destination;
+        PlayerData currentPlayer = GameManager.Instance.GetActivePlayerData();
+        if (currentPlayer != null)
+        {
+            currentPlayer.boardPosition = destination;
+        }
         currentTracker2 = destination;
         splineContainer.Spline.Clear();
 
