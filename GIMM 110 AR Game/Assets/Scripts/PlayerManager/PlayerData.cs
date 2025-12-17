@@ -5,6 +5,7 @@ public class PlayerData : MonoBehaviour
 {
     public string playerName;
     public Color playerColor;
+    public Sprite playerSprite;
     public int totalScore;
     public int boardPosition;
     public int coinsCollected;

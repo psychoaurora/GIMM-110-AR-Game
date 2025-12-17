@@ -1,4 +1,6 @@
 using JetBrains.Annotations;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,6 +9,7 @@ public class SingleRoomPlatformer : IMinigameState
     private readonly MinigameStateMachine machine;
 
     GameObject timerManager;
+    GameObject arCamera;
 
     public SingleRoomPlatformer(MinigameStateMachine machine)
     {
@@ -21,9 +24,19 @@ public class SingleRoomPlatformer : IMinigameState
         IMinigameState singleRoomPlatformer = this;
 
         timerManager = GameObject.Find("TimerManager");
-
         timerManager.GetComponent<TimerManager>().StartSceneTimer(15f, singleRoomPlatformer);
+
+        arCamera = GameObject.Find("ARCamera");
+
+        if (arCamera != null)
+        {
+            arCamera.SetActive(false);
+        }
+
+        //scenePlayerInfo.Instance.UpdatePlayerVisuals();
     }
+
+    
 
     public void Update()
     {
@@ -34,5 +47,11 @@ public class SingleRoomPlatformer : IMinigameState
     {
         Debug.Log("Exiting Single Room Platformer");
         SceneManager.UnloadSceneAsync("SingleRoomPlatformer");
+
+        if (arCamera != null)
+        {
+            arCamera.SetActive(true);
+        }
+        GameManager.Instance.SwitchToNextPlayer();
     }
 }

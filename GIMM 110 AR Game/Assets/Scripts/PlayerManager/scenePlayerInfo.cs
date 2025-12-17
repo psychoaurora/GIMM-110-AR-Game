@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class scenePlayerInfo : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class scenePlayerInfo : MonoBehaviour
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
+            Debug.LogWarning("Destroyed duplicate scenePlayerInfo instance");
             return;
         }
         Instance = this;
@@ -31,6 +33,20 @@ public class scenePlayerInfo : MonoBehaviour
         }
     }
 
+    /*public void UpdatePlayerVisuals()
+    {
+        //ApplyPlayerVisuals();
+        //Debug.Log("Player visuals updated with updateplayervisuals");
+
+        StartCoroutine(DelayPlayerVisuals());
+    }
+    IEnumerator DelayPlayerVisuals()
+    {
+        Debug.Log("Coroutine started");
+        yield return new WaitForSeconds(0.2f);
+        ApplyPlayerVisuals();
+    }*/
+
     private void ApplyPlayerVisuals()
     {
         if (minigamePlayer == null)
@@ -43,8 +59,11 @@ public class scenePlayerInfo : MonoBehaviour
             SpriteRenderer sprite = minigamePlayer.GetComponent<SpriteRenderer>();
             if (sprite != null)
             {
-                sprite.color = currentPlayerData.playerColor;
-                Debug.Log($"Set player color to {currentPlayerData.playerName}'s color");
+                //sprite.color = currentPlayerData.playerColor;
+                //Debug.Log($"Set player color to {currentPlayerData.playerName}'s color");
+
+                sprite.sprite = currentPlayerData.playerSprite;
+                Debug.Log($"Set player sprite to {currentPlayerData.playerName}'s sprite");
             }
         }
     }

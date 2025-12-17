@@ -73,7 +73,7 @@ public class MinigameStateMachine : MonoBehaviour
             Debug.Log("3");
         }
 
-        /*if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.P))
         {
             GambleResult = UnityEngine.Random.Range(1, 2);
             if (GambleResult == 1)
@@ -88,7 +88,7 @@ public class MinigameStateMachine : MonoBehaviour
                 SwitchState(new HorizontalScroller(this));
                 GambleResult = 0;
             }
-        }*/
+        }
     }
 
     public void SwitchState(IMinigameState newState)

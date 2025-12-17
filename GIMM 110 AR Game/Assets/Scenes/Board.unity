@@ -730,8 +730,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fce521aa6d5abb41a2371f4345129d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerName: 
+  playerName: YellowPlayer
   playerColor: {r: 0, g: 0, b: 0, a: 0}
+  playerSprite: {fileID: 1794144026, guid: 4f3fa3cd427676545b97eaddf4bda01b, type: 3}
   totalScore: 0
   boardPosition: 0
   coinsCollected: 0
@@ -3015,7 +3016,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 854915522}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fdaedbf66ac95094d8987f9b8c60fe8f, type: 3}
   m_Name: 
@@ -3114,6 +3115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerName: BluePlayer
   playerColor: {r: 0, g: 0, b: 0, a: 0}
+  playerSprite: {fileID: 922967639, guid: 4f3fa3cd427676545b97eaddf4bda01b, type: 3}
   totalScore: 0
   boardPosition: 0
   coinsCollected: 0
@@ -4636,8 +4638,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fce521aa6d5abb41a2371f4345129d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerName: 
+  playerName: RedPlayer
   playerColor: {r: 0, g: 0, b: 0, a: 0}
+  playerSprite: {fileID: -1824990801, guid: 4f3fa3cd427676545b97eaddf4bda01b, type: 3}
   totalScore: 0
   boardPosition: 0
   coinsCollected: 0
@@ -4827,6 +4830,50 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1865315705}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1220732346
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1220732348}
+  - component: {fileID: 1220732347}
+  m_Layer: 0
+  m_Name: TimerManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1220732347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1220732346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32d7000c2257580469222425cc9149dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1220732348
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1220732346}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.91956, y: 0, z: 1.56105}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1236466975
 GameObject:
@@ -5354,8 +5401,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fce521aa6d5abb41a2371f4345129d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerName: 
+  playerName: GreenPlayer
   playerColor: {r: 0, g: 0, b: 0, a: 0}
+  playerSprite: {fileID: 447568683, guid: 4f3fa3cd427676545b97eaddf4bda01b, type: 3}
   totalScore: 0
   boardPosition: 0
   coinsCollected: 0
@@ -8643,7 +8691,8 @@ SceneRoots:
   - {fileID: 45695114}
   - {fileID: 737502102}
   - {fileID: 214451348}
-  - {fileID: 1765284794}
   - {fileID: 690080152}
   - {fileID: 1681206237}
   - {fileID: 1900616948}
+  - {fileID: 1220732348}
+  - {fileID: 1765284794}
