@@ -54,6 +54,24 @@ public class tilescript : MonoBehaviour
             case "DoublePurple":
                 SplineGen.FindDoubleTile(SplineGen.purpleTiles);
                 break;
+            case "gingerbreadMan":
+                SplineGen.Gingerbreadman();
+                break;
+            case "CandyCane":
+                SplineGen.CandyCane();
+                break;
+            case "gumdrop":
+                SplineGen.Gumdrop();
+                break;
+            case "peanut":
+                SplineGen.PeaNut();
+                break;
+            case "lollipop":
+                SplineGen.LolliPop();
+                break;
+            case "iceCream":
+                SplineGen.IceCream();
+                break;
         }
     }
 }
