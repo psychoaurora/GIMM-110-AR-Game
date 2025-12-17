@@ -315,14 +315,14 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: DoubleYellow
+  mTrackableName: Double yellow
   mInitializedInEditor: 1
   mDataSetPath: 
   mAspectRatio: 1.5657492
   mImageTargetType: 3
   mWidth: 0.12773438
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: c2ad445ac4af904418dd8ad85dbcc3c8, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: ac49f26d9cb11d14ebbd52956ec06ae6, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -356,7 +356,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 45695113}
   mHiddenRoot: {fileID: 0}
-  mTargetName: DoubleYellow
+  mTargetName: Double yellow
   mDatasetName: 
   mCastedBehaviour: {fileID: 45695113}
   mMeshFilter: {fileID: 0}
@@ -1065,14 +1065,14 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: DoublePurple
+  mTrackableName: Double Purple
   mInitializedInEditor: 1
   mDataSetPath: 
   mAspectRatio: 1.5657492
   mImageTargetType: 3
   mWidth: 0.12773438
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: b3e2fa7d38ec76145bc97deff24c8123, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: eeefda28e3fefcf47938cf9c8a7bda9a, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -1106,7 +1106,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 214451347}
   mHiddenRoot: {fileID: 0}
-  mTargetName: DoublePurple
+  mTargetName: Double Purple
   mDatasetName: 
   mCastedBehaviour: {fileID: 214451347}
   mMeshFilter: {fileID: 0}
@@ -2271,7 +2271,31 @@ MonoBehaviour:
     m_RotationOrder: 4
   OnTargetFound:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnTargetLost:
     m_PersistentCalls:
       m_Calls: []
@@ -2290,14 +2314,14 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 
+  mTrackableName: Double Orange
   mInitializedInEditor: 1
   mDataSetPath: 
-  mAspectRatio: 1
+  mAspectRatio: 1.5657492
   mImageTargetType: 3
-  mWidth: 0.2
+  mWidth: 0.12773438
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 0}
+  mRuntimeTexture: {fileID: 2800000, guid: 8621b7ef077c8114890eb771fb071276, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -2331,7 +2355,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 737502101}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 
+  mTargetName: Double Orange
   mDatasetName: 
   mCastedBehaviour: {fileID: 737502101}
   mMeshFilter: {fileID: 0}
