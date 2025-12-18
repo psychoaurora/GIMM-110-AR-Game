@@ -234,6 +234,6 @@ public class SplineGen : MonoBehaviour
         }
         currentTracker2 = destination;
         splineContainer.Spline.Clear();
-
+        MinigameStateMachine.Instance.RandomMinigame();
     }
 }

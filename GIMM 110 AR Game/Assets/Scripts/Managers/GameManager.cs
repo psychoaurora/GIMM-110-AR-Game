@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Splines;
 
@@ -106,19 +107,40 @@ public class GameManager : MonoBehaviour
                 UpdatePlayerPosition();
             }
         }
+        if (GetActivePlayerIsFinished())
+        {
+            SwitchToNextPlayer();
+        }
     }
-
-    
 
     private void UpdatePlayerPosition()
     {
         PlayerData currentPlayer = GetActivePlayerData();
-        spline.GetComponent<SplineGen>().currentTile = currentPlayer.boardPosition;
-        spline.GetComponent<SplineGen>().currentTracker = currentPlayer.boardPosition;
-        spline.GetComponent<SplineGen>().currentTracker2 = currentPlayer.boardPosition;
+        
+        if (!currentPlayer.finishedGamed)
+        {
+            spline.GetComponent<SplineGen>().currentTile = currentPlayer.boardPosition;
+            spline.GetComponent<SplineGen>().currentTracker = currentPlayer.boardPosition;
+            spline.GetComponent<SplineGen>().currentTracker2 = currentPlayer.boardPosition;
+            spline.GetComponent<SplineGen>().destination = currentPlayer.boardPosition;
+        }
 
-
+        if (currentPlayer.boardPosition == spline.GetComponent<SplineGen>().winTile)
+        {
+            currentPlayer.finishedGamed = true;
+        }
     }
+
+    private bool GetActivePlayerIsFinished()
+    {
+        PlayerData currentPlayer = GetActivePlayerData();
+        if (currentPlayer != null)
+        {
+            return currentPlayer.finishedGamed;
+        }
+        return false;
+    }
+
     public SplineAnimate GetSplineAnimate()
     {
         GameObject activePlayer = GetActivePlayer();

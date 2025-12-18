@@ -11,6 +11,7 @@ public class PlayerData : MonoBehaviour
     public int coinsCollected;
     public float minigameTimeLimit = 15f; // Each player can have different time
 
+    public bool finishedGamed = false;
 
 
     public PlayerData(string name, Color color, float timeLimit = 15f)
