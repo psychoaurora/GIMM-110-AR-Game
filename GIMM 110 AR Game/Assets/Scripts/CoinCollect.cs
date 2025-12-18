@@ -18,11 +18,12 @@ public class CoinCollect : MonoBehaviour
 
         if (collision.CompareTag("Player"))
         {
+            scenePlayerInfo.Instance.temporaryScore += 1;
             if (CompareTag("Coin"))
             {
                 timermanager.GetComponent<TimerManager>().DeactivateAndActivate(gameObject, 3f);
                 Debug.Log("Deactivated the game object");
-                scenePlayerInfo.Instance.temporaryScore += 1;
+                
             }
             else
             {

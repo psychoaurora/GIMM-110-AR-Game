@@ -3,7 +3,6 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [HideInInspector] public Rigidbody2D rb;
-    [HideInInspector] public Animator animator;
 
     public Transform groundCheck;
     public LayerMask groundLayer;
@@ -12,9 +11,6 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
-
-       // DontDestroyOnLoad(gameObject);
     }
     private void Update()
     {

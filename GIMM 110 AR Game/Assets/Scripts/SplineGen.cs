@@ -66,7 +66,7 @@ public class SplineGen : MonoBehaviour
         HandleCardInput();
         HandleSpecialTiles();
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.M))
         {
             StartCoroutine(StartplayermoveandSpline());
         }
