@@ -75,19 +75,36 @@ public class MinigameStateMachine : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.P))
         {
-            GambleResult = UnityEngine.Random.Range(1, 2);
+            GambleResult = UnityEngine.Random.Range(1, 3);
             if (GambleResult == 1)
             {
                 Debug.Log("result 1");
                 SwitchState(new SingleRoomPlatformer(this));
                 GambleResult = 0;
             }
-            if (GambleResult == 2)
+            else if (GambleResult == 2)
             {
                 Debug.Log("result 2");
                 SwitchState(new HorizontalScroller(this));
                 GambleResult = 0;
             }
+        }
+    }
+
+    public void RandomMinigame()
+    {
+        GambleResult = UnityEngine.Random.Range(1, 3);
+        if (GambleResult == 1)
+        {
+            Debug.Log("result 1");
+            SwitchState(new SingleRoomPlatformer(this));
+            GambleResult = 0;
+        }
+        else if (GambleResult == 2)
+        {
+            Debug.Log("result 2");
+            SwitchState(new HorizontalScroller(this));
+            GambleResult = 0;
         }
     }
 
