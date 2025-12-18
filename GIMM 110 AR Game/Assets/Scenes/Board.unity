@@ -3455,7 +3455,7 @@ MonoBehaviour:
   mImageTargetType: 3
   mWidth: 0.12773438
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: 083c346d5db235948adfb84c260b6487, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: 642ec4d6115b516428f82a2de145d270, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
