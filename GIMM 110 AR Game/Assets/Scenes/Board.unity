@@ -5879,14 +5879,14 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: GreenTile 1
+  mTrackableName: GreenTile
   mInitializedInEditor: 1
   mDataSetPath: 
   mAspectRatio: 1.5657492
   mImageTargetType: 3
   mWidth: 0.12773438
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: 57c5473e70ffa9146bdd9023c2518aa3, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: ef14e1e68c553464caa25841114a0ba6, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -5900,11 +5900,11 @@ Transform:
   m_GameObject: {fileID: 1268055118}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.24599457, y: 0, z: 0}
+  m_LocalPosition: {x: 82.855, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 1917020677}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1268055123
 MonoBehaviour:
@@ -5934,7 +5934,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 1268055121}
   mHiddenRoot: {fileID: 0}
-  mTargetName: GreenTile 1
+  mTargetName: GreenTile
   mDatasetName: 
   mCastedBehaviour: {fileID: 1268055121}
   mMeshFilter: {fileID: 0}
@@ -8859,7 +8859,7 @@ MonoBehaviour:
   mImageTargetType: 3
   mWidth: 0.12773438
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: 7fde8b09ea6dbf04cb378b483951d2d8, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: db9cc7d8b6fdc70448525b27f74f0362, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -8876,8 +8876,7 @@ Transform:
   m_LocalPosition: {x: 83.101, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
-  m_Children:
-  - {fileID: 1268055122}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1917020678
@@ -9210,14 +9209,14 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: Double Blue
+  mTrackableName: DoubleBlue
   mInitializedInEditor: 1
   mDataSetPath: 
   mAspectRatio: 1.5657492
   mImageTargetType: 3
   mWidth: 0.12773438
   mHeight: 0.2
-  mRuntimeTexture: {fileID: 2800000, guid: 6d08c6e466e8a1c4897b5ccd1bf8f374, type: 3}
+  mRuntimeTexture: {fileID: 2800000, guid: 50ac6874c7356154fa0aaa9d5f8ce7b8, type: 3}
   mMotionHint: 1
   mTrackingOptimization: 0
   mTrackingOptimizationNeedsUpgrade: 0
@@ -9251,7 +9250,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 1948749742}
   mHiddenRoot: {fileID: 0}
-  mTargetName: Double Blue
+  mTargetName: DoubleBlue
   mDatasetName: 
   mCastedBehaviour: {fileID: 1948749742}
   mMeshFilter: {fileID: 0}
@@ -9855,6 +9854,7 @@ SceneRoots:
   - {fileID: 1748840205}
   - {fileID: 781487603}
   - {fileID: 1917020677}
+  - {fileID: 1268055122}
   - {fileID: 760399241}
   - {fileID: 982253026}
   - {fileID: 1922662133}
