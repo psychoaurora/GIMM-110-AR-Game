@@ -211,6 +211,31 @@ public class SplineGen : MonoBehaviour
         currentTile = end;
     }
 
+    public void GingerBreadMan()
+    {
+        destination = gingerbreadMan;
+    }
+    public void CandyCane()
+    {
+        destination = candyCane;
+    }
+    public void GumDrop()
+    {
+        destination = gumdrop;
+    }
+    public void PeaNut()
+    {
+        destination = peanut;
+    }
+    public void LolliPop()
+    {
+        destination = lollipop;
+    }
+    public void IceCream()
+    {
+        destination = iceCream;
+    }
+
     private IEnumerator StartplayermoveandSpline()
     {
 
