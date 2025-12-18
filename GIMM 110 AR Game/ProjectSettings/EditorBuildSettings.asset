@@ -6,14 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/HorizontalScroller.unity
-    guid: fe374db20e9f653448a8df75f9429770
-  - enabled: 1
-    path: Assets/Scenes/Board.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Scenes/IntroAnimation.unity
+    guid: 8cdcd22d5490db2459abfeab124a1c37
   - enabled: 1
     path: Assets/Scenes/Board.unity
     guid: 8aa8d2655f8192145b5e1ca126863482
+  - enabled: 1
+    path: Assets/Scenes/HorizontalScroller.unity
+    guid: fe374db20e9f653448a8df75f9429770
   - enabled: 1
     path: Assets/Scenes/SingleRoomPlatformer.unity
     guid: 5a98744b6c9b1ce4d81774dc100d81b1

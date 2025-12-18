@@ -74,7 +74,7 @@ public class scenePlayerInfo : MonoBehaviour
         Debug.Log($"Points added! Temp score: {temporaryScore}");
     }
 
-    public void EndMinigame() //
+    public void EndMinigame() 
     {
         if (currentPlayerData != null)
         {

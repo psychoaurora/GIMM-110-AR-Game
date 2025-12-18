@@ -32,11 +32,7 @@ public class SingleRoomPlatformer : IMinigameState
         {
             arCamera.SetActive(false);
         }
-
-        //scenePlayerInfo.Instance.UpdatePlayerVisuals();
     }
-
-    
 
     public void Update()
     {

@@ -7,7 +7,6 @@ public class ScoreCounter : MonoBehaviour
 {
     #region Variables
     TextMeshProUGUI text;
-    public static int coinAmount; // public static variable to be accessed by other scripts.
     #endregion
 
     #region Unity Methods
@@ -18,8 +17,8 @@ public class ScoreCounter : MonoBehaviour
 
     void Update()
     {
-        // Could be better to put this in a separate method to avoid calling it every frame.
-        text.text = "Coins: " + coinAmount; // Updates the text to display the current coin amount.
+        PlayerData activePlayer = GameManager.Instance.GetActivePlayerData();
+        text.text = "Score for " + activePlayer.playerName + "=" + activePlayer.totalScore; // Updates the text to display the current coin amount.
     }
     #endregion
 }
